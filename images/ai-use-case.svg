@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+    <!-- Background -->
+    <rect x="0" y="0" width="400" height="300" fill="#f8f9fa" rx="10" ry="10" />
+    
+    <!-- AI Elements -->
+    <g transform="translate(50, 30)">
+        <!-- Robot/AI Icon -->
+        <rect x="100" y="80" width="100" height="120" rx="10" ry="10" fill="#d6c8ee" stroke="#8e44ad" stroke-width="2" />
+        <rect x="110" y="100" width="80" height="40" fill="#9b59b6" />
+        <circle cx="130" cy="120" r="10" fill="#ffffff" />
+        <circle cx="170" cy="120" r="10" fill="#ffffff" />
+        <rect x="135" y="150" width="30" height="5" rx="2" ry="2" fill="#ffffff" />
+        
+        <!-- Antennas -->
+        <rect x="140" y="70" width="5" height="10" fill="#8e44ad" />
+        <rect x="155" y="70" width="5" height="10" fill="#8e44ad" />
+        <circle cx="142.5" cy="65" r="5" fill="#9b59b6" />
+        <circle cx="157.5" cy="65" r="5" fill="#9b59b6" />
+        
+        <!-- Data Flow Lines -->
+        <line x1="30" y1="50" x2="100" y2="100" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="30" y1="100" x2="100" y2="120" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="30" y1="150" x2="100" y2="140" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="30" y1="200" x2="100" y2="180" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <line x1="200" y1="100" x2="270" y2="50" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="200" y1="120" x2="270" y2="100" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="200" y1="140" x2="270" y2="150" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5" />
+        <line x1="200" y1="180" x2="270" y2="200" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- Input Data Cards -->
+        <g transform="translate(5, 30)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#8e44ad" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(5, 80)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#8e44ad" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(5, 130)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#8e44ad" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(5, 180)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#8e44ad" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <!-- Output Data/Prediction Cards -->
+        <g transform="translate(255, 30)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#9b59b6" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(255, 80)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#9b59b6" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(255, 130)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#9b59b6" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <g transform="translate(255, 180)">
+            <rect x="0" y="0" width="40" height="30" rx="5" ry="5" fill="#ffffff" stroke="#9b59b6" stroke-width="1" />
+            <rect x="5" y="5" width="30" height="3" fill="#e0e0e0" />
+            <rect x="5" y="12" width="20" height="3" fill="#e0e0e0" />
+            <rect x="5" y="19" width="15" height="3" fill="#e0e0e0" />
+        </g>
+        
+        <!-- Neural Network Nodes -->
+        <circle cx="150" cy="220" r="8" fill="#8e44ad" />
+        <circle cx="130" cy="240" r="8" fill="#8e44ad" />
+        <circle cx="170" cy="240" r="8" fill="#8e44ad" />
+        <line x1="150" y1="220" x2="130" y2="240" stroke="#9b59b6" stroke-width="2" />
+        <line x1="150" y1="220" x2="170" y2="240" stroke="#9b59b6" stroke-width="2" />
+        
+        <!-- Circuit Board Pattern -->
+        <g transform="translate(50, 220)" opacity="0.3">
+            <line x1="0" y1="0" x2="200" y2="0" stroke="#8e44ad" stroke-width="1" />
+            <line x1="0" y1="10" x2="200" y2="10" stroke="#8e44ad" stroke-width="1" />
+            <line x1="0" y1="20" x2="200" y2="20" stroke="#8e44ad" stroke-width="1" />
+            <line x1="0" y1="0" x2="0" y2="20" stroke="#8e44ad" stroke-width="1" />
+            <line x1="50" y1="0" x2="50" y2="20" stroke="#8e44ad" stroke-width="1" />
+            <line x1="100" y1="0" x2="100" y2="20" stroke="#8e44ad" stroke-width="1" />
+            <line x1="150" y1="0" x2="150" y2="20" stroke="#8e44ad" stroke-width="1" />
+            <line x1="200" y1="0" x2="200" y2="20" stroke="#8e44ad" stroke-width="1" />
+        </g>
+    </g>
+</svg> 

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Annotator - Standardizing Human Computation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/potato-logo.svg" alt="Potato Annotator Logo">
+                    <h1>Potato<span>Annotator</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn btn-small">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Fast and Reliable Human Computation for AI Development and Evaluation</h2>
+                <p>Potato Annotator is a powerful platform designed to make data annotation easy, efficient, and reliable for any project size.</p>
+                <div class="hero-buttons">
+                    <a href="https://platform.potatoannotator.com" class="btn btn-primary">Request Demo</a>
+                    <a href="https://platform.potatoannotator.com/signup" class="btn btn-secondary">Explore Platform</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.svg" alt="Potato Annotator Platform Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-badges">
+        <div class="container">
+            <div class="section-header">
+                <h4>Trusted By Leading Organizations</h4>
+            </div>
+            <div class="badges" style="margin-top: -20px">
+                <div class="badge">
+                    <img src="https://assurgentmedical.com/wp-content/uploads/2017/07/stanford-logo-660x330.png" alt="Stanford University Logo">
+                </div>
+                <div class="badge">
+                    <img src="https://1000logos.net/wp-content/uploads/2022/08/MIT-Logo.png" alt="MIT Logo">
+                </div>
+                <div class="badge">
+                    <img src="https://pngimg.com/d/microsoft_PNG17.png" alt="Microsoft Logo">
+                </div>
+                <div class="badge">
+                    <img src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-2000.png" alt="Amazon Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Designed with simplicity and efficiency in mind</p>
+            </div>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Multi-Task Annotation</h3>
+                    <p>Support for various annotation tasks including language highlighting, moral dilemma action selection, and scenario generation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Crowdsourcing Power</h3>
+                    <p>Leverage the collective intelligence of annotators worldwide for better quality and faster results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>Simple API access and export options to integrate with your existing tools and workflows.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Monitor annotation progress and quality with comprehensive dashboards and reporting tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Use Cases</h2>
+                <p>How organizations use Potato Annotator to achieve their goals</p>
+            </div>
+            <div class="use-case-tabs">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="research">Research</button>
+                    <button class="tab-btn" data-tab="ai">AI Development</button>
+                    <button class="tab-btn" data-tab="content">Content Analysis</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="research">
+                        <div class="tab-text">
+                            <h3>Academic & Research</h3>
+                            <p>Research teams use Potato Annotator to collect and analyze human judgments on language, behaviors, and scenarios. Perfect for psychology, linguistics, and social science studies.</p>
+                            <ul>
+                                <li>Collect human judgments on moral dilemmas</li>
+                                <li>Analyze linguistic features across cultures</li>
+                                <li>Study human perception and decision-making</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn more about research applications</a>
+                        </div>
+                        <div class="tab-image">
+                            <img src="images/research-use-case.svg" alt="Research Use Case">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ai">
+                        <div class="tab-text">
+                            <h3>AI & Machine Learning</h3>
+                            <p>AI teams use Potato Annotator to build high-quality training datasets for machine learning models, ensuring more accurate and ethical AI systems.</p>
+                            <ul>
+                                <li>Create labeled datasets for supervised learning</li>
+                                <li>Develop benchmarks for evaluating AI models</li>
+                                <li>Gather human feedback for reinforcement learning</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn more about AI applications</a>
+                        </div>
+                        <div class="tab-image">
+                            <img src="images/ai-use-case.svg" alt="AI Use Case">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="content">
+                        <div class="tab-text">
+                            <h3>Content & Media Analysis</h3>
+                            <p>Content creators and media companies use Potato Annotator to understand audience reactions and improve content relevance and quality.</p>
+                            <ul>
+                                <li>Analyze sentiment in user-generated content</li>
+                                <li>Classify and moderate online discussions</li>
+                                <li>Test content effectiveness before publication</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn more about content applications</a>
+                        </div>
+                        <div class="tab-image">
+                            <img src="images/content-use-case.svg" alt="Content Use Case">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Simplify Your Data Annotation Process?</h2>
+                <p>Join hundreds of organizations that trust Potato Annotator for their data needs.</p>
+                <a href="#demo" class="btn btn-large">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Pricing</h2>
+                <p>No prepaid fees, only pay when you use the service</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="amount">$0</span>
+                            <span class="period">forever</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Open source platform</li>
+                            <li><i class="fas fa-check"></i> Self-hosted deployment</li>
+                            <li><i class="fas fa-check"></i> Basic annotation types</li>
+                            <li><i class="fas fa-check"></i> Community support</li>
+                            <li><i class="fas fa-check"></i> Local data control</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="https://github.com/potato-annotator/open-source" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="pricing-header">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3>Standard</h3>
+                        <div class="price">
+                            <span class="amount">2%</span>
+                            <span class="period">service fee</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pay only for what you use</li>
+                            <li><i class="fas fa-check"></i> No monthly minimums</li>
+                            <li><i class="fas fa-check"></i> All annotation types</li>
+                            <li><i class="fas fa-check"></i> Managed cloud infrastructure</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="https://platform.potatoannotator.com/signup" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Advanced</h3>
+                        <div class="price">
+                            <span class="amount">Custom</span>
+                            <span class="period">pricing</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full data services</li>
+                            <li><i class="fas fa-check"></i> Custom annotation templates</li>
+                            <li><i class="fas fa-check"></i> SLA guarantees</li>
+                            <li><i class="fas fa-check"></i> Dedicated success manager</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Enterprise compliance options</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Potato Annotator</h2>
+                <p>The story behind our powerful annotation platform</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/team.svg" alt="Potato Annotator Team">
+                </div>
+                <div class="about-text">
+                    <p>Potato Annotator was founded by a team of researchers and engineers with a passion for making data annotation accessible to everyone. Our platform has evolved from a simple annotation tool to a comprehensive solution that powers research and AI development worldwide.</p>
+                    <p>Our mission is to democratize access to high-quality annotated data and to help organizations make better decisions based on human insights. With a focus on simplicity, reliability, and ethical data practices, we're committed to supporting the advancement of AI and research for the benefit of humanity.</p>
+                    <div class="values">
+                        <div class="value">
+                            <h4><i class="fas fa-bullseye"></i> Simplicity</h4>
+                            <p>Making data annotation accessible to everyone</p>
+                        </div>
+                        <div class="value">
+                            <h4><i class="fas fa-shield-alt"></i> Quality</h4>
+                            <p>Ensuring the highest standards in data collection</p>
+                        </div>
+                        <div class="value">
+                            <h4><i class="fas fa-handshake"></i> Integrity</h4>
+                            <p>Operating with transparency and ethical principles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We're here to help</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>info@potatoannotator.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Call Us</h4>
+                        <p>+1 (123) 456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Visit Us</h4>
+                        <p>123 Annotation Street<br>San Francisco, CA 94103</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/potato-logo.svg" alt="Potato Annotator Logo">
+                    <h3>Potato<span>Annotator</span></h3>
+                    <p>Simplify your data annotation needs</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#use-cases">Use Cases</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#demo">Request Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Community Forum</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Potato Annotator. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
