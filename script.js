@@ -2,15 +2,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
     
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', function() {
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
-            
-            // Animate the hamburger icon
-            const spans = this.querySelectorAll('span');
-            spans.forEach(span => span.classList.toggle('active'));
+            body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking on a link or outside the menu
+        document.addEventListener('click', function(e) {
+            // If menu is open and click is outside menu and not on menu button
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+        
+        // Close menu when escape key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+        
+        // Close menu when window is resized past mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
         });
     }
     
@@ -36,59 +64,48 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 
                 window.scrollTo({
-                    top: targetPosition - headerHeight - 20, // Extra 20px padding
+                    top: targetPosition - headerHeight, // Removed extra padding
                     behavior: 'smooth'
                 });
             }
         });
     });
     
-    // Tab functionality for use cases section
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
-    
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons and panes
-            tabBtns.forEach(btn => btn.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Show corresponding tab pane
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-    
     // Header scroll effect
     const header = document.querySelector('header');
     let lastScrollTop = 0;
+    let scrollTimer;
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
+        // Add scrolled class when scrolling past threshold
+        if (scrollTop > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
         
-        // Show/hide header on scroll direction
+        // Only hide header after user has stopped scrolling for a moment
+        clearTimeout(scrollTimer);
+        
+        // Show/hide header on scroll direction with throttling
         if (scrollTop > lastScrollTop && scrollTop > 200) {
-            // Scrolling down, hide header
+            // Scrolling down, hide header (but with a slight delay)
             header.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up, show header
+            // Scrolling up, show header immediately
             header.style.transform = 'translateY(0)';
         }
         
-        lastScrollTop = scrollTop;
+        // This creates a small delay to prevent header from flashing
+        scrollTimer = setTimeout(() => {
+            lastScrollTop = scrollTop;
+        }, 50);
     });
     
     // Add animation class to elements when they come into view
-    const animateElements = document.querySelectorAll('.feature-card, .pricing-card, .about-image, .about-text');
+    const animateElements = document.querySelectorAll('.feature-card, .pricing-card, .about-image, .about-text, .use-case-card');
     
     const observerOptions = {
         root: null,
@@ -112,22 +129,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add CSS for animations
     const style = document.createElement('style');
     style.textContent = `
-        .feature-card, .pricing-card, .about-image, .about-text {
+        .feature-card, .pricing-card, .about-image, .about-text, .use-case-card {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
-        .feature-card.animate, .pricing-card.animate, .about-image.animate, .about-text.animate {
+        .feature-card.animate, .pricing-card.animate, .about-image.animate, .about-text.animate, .use-case-card.animate {
             opacity: 1;
             transform: translateY(0);
         }
         
-        .feature-card:nth-child(2), .pricing-card:nth-child(2) {
+        .feature-card:nth-child(2), .pricing-card:nth-child(2), .use-case-card:nth-child(2) {
             transition-delay: 0.2s;
         }
         
-        .feature-card:nth-child(3), .pricing-card:nth-child(3) {
+        .feature-card:nth-child(3), .pricing-card:nth-child(3), .use-case-card:nth-child(3) {
             transition-delay: 0.4s;
         }
         
