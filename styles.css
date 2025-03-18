@@ -689,108 +689,40 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-}
-
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-}
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.form-group {
-    flex: 1 0 calc(50% - 8px);
-}
-
-.form-group.full-width {
-    flex: 0 0 100%;
-}
-
-label {
-    display: block;
-    margin-bottom: 4px;
-    font-weight: 500;
-    font-size: 0.875rem;
-    color: var(--foreground);
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 0.875rem;
-    background-color: var(--background);
-    color: var(--foreground);
-    transition: var(--transition);
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(110, 86, 207, 0.2);
-}
-
-form button {
-    margin-top: 8px;
-}
-
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.info-item i {
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-}
-
-.info-item h4 {
-    margin-bottom: 4px;
-    font-size: 1.125rem;
-}
-
-.info-item p {
-    color: var(--muted-foreground);
-    font-size: 0.9375rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: var(--muted);
-    border-radius: 6px;
-    transition: var(--transition);
-    color: var(--muted-foreground);
 }
 
-.social-link:hover {
-    background-color: var(--primary-color);
-    color: white;
+.contact-email {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-email:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.contact-email i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.contact-email h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--foreground);
+}
+
+.contact-email p {
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
 }
 
 /* Footer */

@@ -62,47 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission handling
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Gather form data
-            const formData = new FormData(this);
-            const formDataObj = {};
-            
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
-            
-            // In a real implementation, you would send this data to your backend
-            // For now, we'll just show a success message
-            
-            // Replace form with success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'form-success';
-            successMessage.innerHTML = `
-                <i class="fas fa-check-circle"></i>
-                <h3>Message Sent Successfully!</h3>
-                <p>Thank you for contacting us. We'll get back to you shortly.</p>
-            `;
-            
-            this.style.opacity = '0';
-            setTimeout(() => {
-                this.style.display = 'none';
-                contactForm.parentNode.appendChild(successMessage);
-                setTimeout(() => {
-                    successMessage.style.opacity = '1';
-                }, 10);
-            }, 300);
-            
-            // In a real scenario, reset the form after sending data
-            // this.reset();
-        });
-    }
-    
     // Header scroll effect
     const header = document.querySelector('header');
     let lastScrollTop = 0;
@@ -230,28 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 text-align: center;
                 width: 100%;
             }
-        }
-        
-        .form-success {
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            padding: 40px 0;
-        }
-        
-        .form-success i {
-            font-size: 4rem;
-            color: var(--success-color);
-            margin-bottom: 20px;
-        }
-        
-        .form-success h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .form-success p {
-            color: var(--gray-color);
         }
     `;
     
