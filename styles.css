@@ -285,6 +285,30 @@ nav {
     margin-left: 8px;
 }
 
+/* Platform link styling */
+.nav-links .btn-platform {
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    background-color: rgba(110, 86, 207, 0.1);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid transparent;
+}
+
+.nav-links .btn-platform:hover {
+    background-color: rgba(110, 86, 207, 0.15);
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+
+.nav-links .btn-platform i {
+    font-size: 0.7rem;
+}
+
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -472,48 +496,77 @@ nav {
 }
 
 .trust-badges .container {
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
+}
+
+.badges-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-top: -20px;
+}
+
+.badges-container::before,
+.badges-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.badges-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--light-bg), transparent);
+}
+
+.badges-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--light-bg), transparent);
 }
 
 .badges {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 40px;
-    margin-top: 16px;
-    overflow-x: auto;
-    padding: 20px 0 30px;
-    min-width: 100%;
-    scrollbar-width: thin;
-    position: relative;
-    z-index: 1;
+    gap: 30px;
+    padding: 20px 0;
+    animation: scrollLogos 60s linear infinite;
+    width: max-content;
 }
 
-.badges::-webkit-scrollbar {
-    height: 4px;
+.badges:hover {
+    animation-play-state: paused;
 }
 
-.badges::-webkit-scrollbar-thumb {
-    background-color: var(--border);
-    border-radius: 4px;
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 15px));
+    }
 }
 
 .badge {
     text-align: center;
-    flex: 0 0 auto;
+    flex: 0 0 160px;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110px;
-    width: 200px;
+    height: 100px;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: margin-top 0.3s ease;
+    margin: 0;
 }
 
 .badge:hover {
-    transform: translateY(-5px);
+    margin-top: -5px;
 }
 
 .badge::before {
@@ -534,48 +587,90 @@ nav {
 }
 
 .badge img {
-    max-height: 85px;
-    max-width: 180px;
+    height: auto;
+    width: auto;
+    max-width: 150px;
     object-fit: contain;
     transition: all 0.3s ease;
     filter: none;
 }
 
 .badge:hover img {
-    transform: scale(1.05);
+    height: 103%;
+    width: auto;
 }
 
-/* Special styling for Stanford logo */
-.badge:nth-child(1) img {
-    max-height: 70px;
+/* Logo-specific styling using class-based approach for better consistency */
+.badge.stanford-badge img {
+    height: 65px;
+    width: auto;
+    max-width: 150px;
 }
 
-/* Special styling for MIT logo */
-.badge:nth-child(2) img {
-    max-height: 85px;
-    max-width: 170px;
+.badge.mit-badge img {
+    height: 70px;
+    width: auto;
+    max-width: 150px;
 }
 
-/* Special styling for University of Michigan logo */
-.badge:nth-child(3) {
-    width: 220px;
+.badge.umich-badge img {
+    height: 63px;
+    width: auto;
+    max-width: 135px;
 }
 
-.badge:nth-child(3) img {
-    max-height: 95px;
-    max-width: 200px;
+.badge.yale-badge img {
+    height: 39px;
+    width: auto;
+    max-width: 90px;
 }
 
-/* Special styling for Microsoft logo */
-.badge:nth-child(4) img {
-    max-height: 70px;
-    max-width: 170px;
+.badge.berkeley-badge img {
+    height: 63px;
+    width: auto;
+    max-width: 135px;
 }
 
-/* Special styling for Amazon logo */
-.badge:nth-child(5) img {
-    max-height: 65px;
-    max-width: 160px;
+.badge.cambridge-badge img {
+    height: 52px;
+    width: auto;
+    max-width: 120px;
+}
+
+.badge.microsoft-badge img {
+    height: 59px;
+    width: auto;
+    max-width: 135px;
+}
+
+.badge.amazon-badge img {
+    height: 52px;
+    width: auto;
+    max-width: 120px;
+}
+
+.badge.ai2-badge img {
+    height: 49px;
+    width: auto;
+    max-width: 105px;
+}
+
+.badge.cohere-badge img {
+    height: 85px;
+    width: auto;
+    max-width: 195px;
+}
+
+.badge.prolific-badge img {
+    height: 65px;
+    width: auto;
+    max-width: 150px;
+}
+
+.badge.cloudresearch-badge img {
+    height: 104px;
+    width: auto;
+    max-width: 240px;
 }
 
 .badge p {
@@ -935,21 +1030,83 @@ nav {
 
 /* CTA Section */
 .cta {
-    padding: 64px 0;
+    padding: 80px 0;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+    top: -150px;
+    right: -50px;
+    z-index: 0;
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    bottom: -100px;
+    left: -100px;
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(110, 86, 207, 0.3) 0%, rgba(161, 143, 255, 0) 100%);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta-content::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+    top: -75px;
+    right: 50px;
+    z-index: -1;
+}
+
+.cta-content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    bottom: -50px;
+    left: 60px;
+    z-index: -1;
 }
 
 .cta-content h2 {
     font-size: 2rem;
     margin-bottom: 16px;
     color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cta-content p {
     font-size: 1.125rem;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -959,10 +1116,19 @@ nav {
 .cta .btn {
     background-color: white;
     color: var(--primary-color);
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    height: auto;
 }
 
 .cta .btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Pricing Section */
@@ -1772,6 +1938,13 @@ footer::before {
         text-align: center;
     }
     
+    .nav-links .btn-platform {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
     /* Add overlay when mobile menu is active */
     body:before {
         content: '';
@@ -1959,4 +2132,71 @@ footer::before {
 
 .policy-contact .contact-btn {
     margin-top: 5px;
+}
+
+/* Careers Section */
+.careers-section {
+    padding: 160px 0 120px;
+    background-color: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.careers-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(110, 86, 207, 0.03) 0%, rgba(110, 86, 207, 0) 70%);
+    z-index: -1;
+}
+
+.careers-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.no-openings-card {
+    background-color: var(--card);
+    border-radius: 16px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    max-width: 700px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid var(--border);
+}
+
+.no-openings-card .icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(110, 86, 207, 0.1) 0%, rgba(161, 143, 255, 0.05) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.no-openings-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.no-openings-card p {
+    color: var(--muted-foreground);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.no-openings-card a {
+    font-weight: 600;
 } 
